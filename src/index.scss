@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+.Container {
+  @media (min-width: 1024px) {
+    grid-template-areas:
+      "GRID1 GRID1 GRID2 GRID5"
+      "GRID3 GRID4 GRID4 GRID5";
+    gap: 2rem;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    grid-template-areas:
+      "GRID1 GRID1 GRID5"
+      "GRID2 GRID2 GRID5"
+      "GRID3 GRID4 GRID4"
+      "GRID3 GRID4 GRID4 ";
+    gap: 2rem;
+  }
+}
+
+.Grid1 {
+  grid-area: GRID1;
+}
+.Grid2 {
+  grid-area: GRID2;
+}
+.Grid3 {
+  grid-area: GRID3;
+}
+.Grid4 {
+  grid-area: GRID4;
+}
+.Grid5 {
+  grid-area: GRID5;
+}
